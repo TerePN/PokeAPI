@@ -8,15 +8,17 @@ import ProtectedRoutes from "./components/ProtectedRoutes";
 
 function App() {
   return (
-    
+
     <HashRouter>
       <div className="App">
         <Routes>
           <Route path="/" element={<UserInput />} />
 
-          <Route element={<ProtectedRoutes />}></Route>
-          <Route path="/characters" element={<Characters />} />
-          <Route path="/characters/:id" element={<CharacterDetail />} />
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/characters" element={<Characters />} />
+            <Route path="/characters/:id" element={<CharacterDetail />} />
+          </Route>
+
         </Routes>
       </div>
     </HashRouter>
