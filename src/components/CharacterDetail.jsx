@@ -12,16 +12,16 @@ const CharacterDetail = () => {
   useEffect(() => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then(res => setPokemon(res.data))
-  }, [])
+  }, [id])
 
   return (
 
     <div>
-
-      <h2>Character Detail</h2>
-
+      <h1>{pokemon.name}</h1>
       <img src={pokemon.sprites?.front_default} alt="" />
-
+      <p>
+        Mostrando personaje con id: <b>{id}</b>
+      </p>
     </div>
   );
 };
