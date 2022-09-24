@@ -3,6 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import Header from "./Header";
 
 const CharacterDetail = () => {
 
@@ -18,6 +19,7 @@ const CharacterDetail = () => {
 
     <div>
 
+      <Header/>
       <h2>Character Detail</h2>
 
       <img src={pokemon.sprites?.front_default} alt="" />
