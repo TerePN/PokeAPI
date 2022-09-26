@@ -9,7 +9,6 @@ export const userNameSlice = createSlice({
             const userName= action.payload
             return userName
         }
-        
     }
 })
 
