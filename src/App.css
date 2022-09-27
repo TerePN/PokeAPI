@@ -1,42 +1,137 @@
+@import url('//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon');                
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;                                             
+}
+
+body{
+  width: 99vw;
+}
+
 #root {
-  max-width: 1280px;
+  max-width: 99vw;
+  overflow: hidden;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.app{
+  width: 99vw;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+/* styles UserInput */
+
+.conteinerUserInput{
+  width: 99vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: end;
+  background-color: lightslategray;
+  font-family: 'Pokemon Solid', sans-serif;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.conteinerUserInput--imgHeader{
+  width: 80%;
+}
+
+.conteinerUserInput--form{
+  margin-bottom: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer--Img{
+  width: 100%;
+  height: 20%;
+}
+
+/* styles header */
+
+.header{
+  width: 99vw;
+  height: 20vh;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.header--divMax{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 70%;
+  background-color: #DD1A1A;
+}
+
+.divMax--img{
+  width: 50%;
+  height: 60%;
+}
+
+.header--divMin{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 1rem;
+  width: 100%;
+  height: 20%;
+  background-color: black;
+}
+
+.divMin--radiusMax{
+  width: 2.3rem;
+  height: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px black solid;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.radiusMax--radiusMin{
+  width: 75%;
+  height: 75%;
+  border: 5px black solid;
+  background-color: #212121;
+  border-radius: 50%;
+}
+
+/* styles Character */
+
+.conteiner--characterCard{
+  width: 99vw;
+  margin-top: 2rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 70%;
+}
+
+.characterCard{
+  width: 100%;
+  background-color: palegreen;
+  border-radius: 5%;
+  border: 4px black solid;
+  margin-bottom: 1rem;
+}
+
+.characterCard--header{
+  width: 100%;
+  height: 10%;
+  background-color: palevioletred;
 }
 
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
