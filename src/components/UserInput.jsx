@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { changeName } from "../store/slice/userName.slice";
 
+
 const UserInput = () => {
 
   const dispatch = useDispatch();
@@ -31,10 +32,9 @@ const UserInput = () => {
           className="conteinerUserInput--input"
           required
           value={userName}
-          placeholder="ENTER YOUR NAME"
+          placeholder="Enter your name..."
           onChange={e => setUserName(e.target.value)} />
-        <button className="button-input">Search
-        </button>
+        <button className="button-input">Begin</button>
       </form>
       </div>
         <img className="footer--Img" src="https://c.wallhere.com/photos/39/8b/Pok_mon_Pok_Balls_artwork-1368481.jpg!d" alt="" />
