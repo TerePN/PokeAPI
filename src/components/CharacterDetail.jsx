@@ -11,6 +11,7 @@ const CharacterDetail = () => {
   const [pokemon, setPokemon] = useState({})
   const [pokemonBackground, setPokemonBackground] = useState("")
   const [pokemonColor, setPokemonColor] = useState("")
+  const [weightCard, setWeightCard] = useState("")
 
   useEffect(() => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -92,29 +93,93 @@ const CharacterDetail = () => {
   return (
 
     <div className="characterDetail">
-
       <Header />
-      <div>
-        <div className="characterDetail--header" style={{ backgroundImage: `${pokemonBackground}` }} >
-          <img src={pokemon.sprites?.front_default} alt="" />
-        </div>
-        <div>
-          <h2> #{pokemon.id} </h2>
-        </div>
-        
-        <div>
-          <h2> {pokemon.name} </h2>
+
+      <div className="characterDetail--info">
+
+        <div className="info--header" style={{ backgroundImage: `${pokemonBackground}` }} >
+          <img className="header--img" src={pokemon.sprites?.front_default} alt="" />
         </div>
 
-      <div>
-      <small>peso: </small>
-      <small>altura: </small>
-      </div>
+<div className="info--sectionDiv" >
+        <div className="info--id">
+          <h2 style={{ color: `${pokemonColor}` }} > #{pokemon.id} </h2>
+        </div>
 
-      <div>
-        <h3>type</h3>
-        <h3>habilidades</h3>
-      </div>
+        <div className="info--name">
+          <hr />
+          <h2 style={{ color: `${pokemonColor}` }} > {pokemon.name} </h2>
+        </div>
+
+        <div className="info--weight">
+          <small className="weight--info">weight:</small>
+          <small > {pokemon.weight} </small>
+        </div>
+        <div className="info--height">
+          <small className="height--info">height: </small>
+          <small > {pokemon.height} </small>
+        </div>
+
+        <div className="info--typeAbilities">
+          <h3>type</h3>
+          <h3>abilities</h3>
+        </div>
+
+        <div className="typeAbilities--info">
+          <ul>
+            {
+              pokemon.types?.map(type => (
+                <li key={type.type.url}> {type.type.name} </li>
+              ))
+            }
+            </ul>
+            <ul>
+            {
+              pokemon.abilities?.map(ability => (
+                <li key={ability.ability.url}> {ability.ability.name} </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div className="stats">
+          <hr />
+          <h3 className="stats--tittle">stats</h3>
+
+          <div className="stats--stat">
+            <h4>hp:</h4>
+            <small> {pokemon.stats?.[0].base_stat} /150 </small>
+          </div>
+          <div className="stats--bar">
+            <div className="bar--porc" style={{weight: '40px' }} ></div>
+          </div>
+
+          <div className="stats--stat">
+            <h4>attack:</h4>
+            <small> {pokemon.stats?.[1].base_stat} /150 </small>
+          </div>
+          <div className="stats--bar">
+            <div className="bar--porc"></div>
+          </div>
+
+          <div className="stats--stat">
+            <h4>defense:</h4>
+            <small> {pokemon.stats?.[2].base_stat} /150 </small>
+          </div>
+          <div className="stats--bar">
+            <div className="bar--porc"></div>
+          </div>
+
+          <div className="stats--stat">
+            <h4>speed:</h4>
+            <small> {pokemon.stats?.[5].base_stat} /150 </small>
+          </div>
+          <div className="stats--bar">
+            <div className="bar--porc"></div>
+          </div>
+
+        </div>
+        </div>
 
       </div>
 
