@@ -155,17 +155,17 @@ body {
 }
 
 .conteinerCharacter--tittle {
-  width: 99%;
-  overflow: hidden;
-  margin-left: 1rem;
-  margin-bottom: 0.4rem;
-  gap: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: start;
+  /* width: 99%; */
+  /* overflow: hidden; */
+  /* margin-left: 4rem; */
+  /* margin-bottom: 0.4rem; */
+  /* gap: 0.5rem; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: baseline; */
+  /* justify-content: center; */
   color: #D93F3F;
-  font-size: 10px;
+  font-size: 9px;
 }
 span{
   color: black;
