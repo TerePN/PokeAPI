@@ -24,7 +24,7 @@ const UserInput = () => {
       <div className="conteinerUserInput--form">
       <img className="conteinerUserInput--imgHeader" src="https://s3-alpha-sig.figma.com/img/ca59/d9ce/98042af437fdff212d3259040db2e2db?Expires=1664755200&Signature=D1-cUDtim09VyodQPnnSOTElNzktpmU~nrpj~CGRaCZ-4IyFvQ9hCqwGrhLof5ZI6L3ws5diSiGQj6KyhxsK1-sXIqnQsUdY31SdN-xU9yAgZzZEJAmzGpIlOv2S2ce11b5T9cauXtvyOkJXtkJx5puEa1XxRV2Ed~xEOs4C~EqmgjL00JCf0SP7-VJo2rZMbxng0NHfc0qnjQoXi9XAek6yJzMWIxONEBOUvkjfotKvPtdYG-Bvv-aVxGMx~qhtlvzzvvksDLi9WOhi-D-EQ-2zcOCdrreoxp1x23sr6vYzswtosAtxIoiDFICdtWjrC~vWFFrWXLwdJPxgENdjdw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="" />
       <h1 className="hello"><b>¡Hello trainer!</b></h1>
-      <p >Give me your name to start</p>
+      <p >Give me your name, to start</p>
 
       <form onSubmit={dispatchUserName}>
         <input
@@ -32,7 +32,7 @@ const UserInput = () => {
           className="conteinerUserInput--input"
           required
           value={userName}
-          placeholder="Enter your name..."
+          placeholder="Name..."
           onChange={e => setUserName(e.target.value)} />
         <button className="conteinerUserInput--button">
           <i className="fa-sharp fa-solid fa-paper-plane"></i>
