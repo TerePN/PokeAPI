@@ -33,8 +33,7 @@ const UserInput = () => {
           value={userName}
           placeholder="ENTER YOUR NAME"
           onChange={e => setUserName(e.target.value)} />
-        <button>
-          <i className="fa-sharp fa-solid fa-paper-plane"></i>
+        <button className="button-input">Search
         </button>
       </form>
       </div>

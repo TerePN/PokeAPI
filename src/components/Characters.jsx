@@ -15,6 +15,7 @@ const Characters = () => {
   const [nameInput, setNameInput] = useState("");
   const [typesPokemon, setTypesPokemon] = useState([]);
 
+
   useEffect(() => {
     axios.get("https://pokeapi.co/api/v2/pokemon/")
       .then((res) => setPokemonList(res.data.results));
@@ -34,39 +35,41 @@ const Characters = () => {
   }
 
   return (
-    <div className="conteiner--character">
+    <div className="conteinerCharacter">
 
       <Header />
-      <h1>Characters</h1>
-      <p>Bienvenid@ {name}</p>
 
-      <input
-        type="text"
-        className="searchPokemon"
-        value={nameInput}
-        onChange={e => setNameInput(e.target.value)}
-        placeholder="buscar un pokemon" />
+      <h2 className="conteinerCharacter--tittle">Bienvenid@ {name}</h2>
 
-      <button
-        className="buttonSearchPokemon"
-        onClick={searchName}>
-        <i className="fa-solid fa-magnifying-glass"></i>
-      </button>
+      <div className="conteinerCharacter--inputs">
+        <input
+          type="text"
+          className="searchPokemon"
+          value={nameInput}
+          onChange={e => setNameInput(e.target.value)}
+          placeholder="buscar un pokemon" />
 
-      <select 
-      name="" 
-      id=""
-      className="select"
-      onChange={e => searchType(e.target.value)}>
-        <option value="">select pokemon type</option>
-        {
-          typesPokemon.map(type => (
-            <option value={type.url} key={type.url}>{type.name}</option>
-          ))
-        }
-      </select>
+        <button
+          className="buttonSearchPokemon"
+          onClick={searchName}>
+          <i className="fa-solid fa-magnifying-glass"></i>
+        </button>
 
-      <ul className="conteiner--characterCard">
+        <select
+          name=""
+          id=""
+          className="select"
+          onChange={e => searchType(e.target.value)}>
+          <option value="">select pokemon type</option>
+          {
+            typesPokemon.map(type => (
+              <option value={type.url} key={type.url}>{type.name}</option>
+            ))
+          }
+        </select>
+      </div>
+
+      <ul className="conteinerCharacter--Card">
         {
           pokemonList.map((pokemon) => (
             <CharacterCard

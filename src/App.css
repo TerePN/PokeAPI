@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 h1{
@@ -12,33 +13,35 @@ h1{
 }
 
 body{
-  width: 99vw;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 #root {
-  max-width: 99vw;
+  max-width: 100vw;
   overflow: hidden;
-  margin: 0 auto;
   text-align: center;
 }
 
 .app{
-  width: 99vw;
+  width: 100vw;
+  overflow: hidden;
 }
 
 /* styles UserInput */
 
 .conteinerUserInput{
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction:column;
   align-items: center;
   justify-content: end;
-  background-color: lightslategray;
+  /* background-color: lightslategray; */
   font-family: 'Pokemon Solid', sans-serif;
 }
+
 
 .conteinerUserInput--imgHeader{
   width: 80%;
@@ -56,11 +59,24 @@ body{
   width: 100%;
   height: 20%;
 }
+.button-input{
+background-color:#D93F3F;
+/* height: 68px;
+width: 209.21221923828125px; */
+color: white;
+width: 100px;
+font-family: Roboto;
+font-size: 24px;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: center;
 
+}
 /* styles header */
 
 .header{
-  width: 99vw;
+  width: 100vw;
   height: 20vh;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -111,8 +127,26 @@ body{
 
 /* styles Character */
 
-.conteiner--characterCard{
-  width: 99vw;
+.conteinerCharacter{
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+}
+
+.conteinerCharacter--tittle{
+  width: 99%;
+  overflow: hidden;
+}
+
+.conteinerCharacter--inputs{
+  width: 99%;
+  overflow: hidden;
+}
+
+.conteinerCharacter--Card{
+  width: 100%;
+  gap: 1rem;
+  overflow: hidden;
   margin-top: 2rem;
   display: grid;
   align-items: center;
@@ -120,9 +154,15 @@ body{
   grid-template-columns: 70%;
 }
 
+/* styles characters card */
+
 .characterCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0.8rem;
   width: 100%;
-  background-color: palegreen;
+  height: 90%;
   border-radius: 5%;
   border: 4px black solid;
   margin-bottom: 1rem;
@@ -130,8 +170,43 @@ body{
 
 .characterCard--header{
   width: 100%;
-  height: 10%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
   background-color: palevioletred;
+}
+
+.characterCard--img{
+  width: 80%;
+}
+
+.characterCard--info{
+  display: grid;
+  row-gap: 0.4rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info--h3{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.listType{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.listItems{
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+.info--b{
+  display: block;
 }
 
 
