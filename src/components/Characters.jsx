@@ -15,9 +15,15 @@ const Characters = () => {
   const [nameInput, setNameInput] = useState("");
   const [typesPokemon, setTypesPokemon] = useState([]);
 
+  // paginated
+  const page = 50
+  const pokemonsPerPage = 8;
+  const lastIndex = page * pokemonsPerPage
+  const firstIndex = lastIndex - pokemonsPerPage
+  const pokemonsPaginated = pokemonList.slice( firstIndex, lastIndex ) 
 
   useEffect(() => {
-    axios.get("https://pokeapi.co/api/v2/pokemon/")
+    axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1155")
       .then((res) => setPokemonList(res.data.results));
 
     axios.get("https://pokeapi.co/api/v2/type")
@@ -75,12 +81,17 @@ const Characters = () => {
 
       <ul className="conteinerCharacter--Card">
         {
-          pokemonList.map((pokemon) => (
+          pokemonsPaginated.map((pokemon) => (
             <CharacterCard
               url={pokemon.url} key={pokemon.url} />
           ))
         }
       </ul>
+
+        <div className="buttons">
+          <button>next</button>
+          <button>previous</button>
+        </div>
 
     </div>
   );
