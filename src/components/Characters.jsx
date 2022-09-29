@@ -39,7 +39,11 @@ const Characters = () => {
 
       <Header />
 
-      <h2 className="conteinerCharacter--tittle">Bienvenid@ {name}</h2>
+      <div className="conteinerCharacter--tittle">
+        <h2> welcome </h2> 
+        <b> {name} </b>
+       </div>
+
 
       <div className="conteinerCharacter--inputs">
         <input
@@ -47,7 +51,7 @@ const Characters = () => {
           className="searchPokemon"
           value={nameInput}
           onChange={e => setNameInput(e.target.value)}
-          placeholder="buscar un pokemon" />
+          placeholder="Search pokemon" />
 
         <button
           className="buttonSearchPokemon"

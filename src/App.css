@@ -79,7 +79,6 @@ text-align: center;
   width: 100vw;
   height: 20vh;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .header--divMax{
@@ -128,7 +127,7 @@ text-align: center;
 /* styles Character */
 
 .conteinerCharacter{
-  width: 100vw;
+  width: 99vw;
   overflow: hidden;
   margin: 0;
 }
@@ -136,18 +135,75 @@ text-align: center;
 .conteinerCharacter--tittle{
   width: 99%;
   overflow: hidden;
+  margin-left: 2.5rem;
+  margin-bottom: 0.4rem;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  justify-content:start;
 }
+
+/* inputs */
 
 .conteinerCharacter--inputs{
   width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
+.searchPokemon{
+  width: 35%;
+  border-radius: 5px;
+  padding: 0.2rem;
+  border: 0.2px solid lightslategray;
+}
+
+.searchPokemon:hover{
+  background-color: #D93F3F;
+  color: white;
+}
+
+.searchPokemon::placeholder{
+   color: #D93F3F;
+   font-size: 0.7rem;
+   font-weight: bold;
+  }
+
+  .searchPokemon::placeholder:hover{
+    color: white;
+  }
+
+.buttonSearchPokemon{
+  background-color: #D93F3F;
+  color: white;
+  padding: 0.2rem;
+  margin-left: 0.1rem;
+  margin-right: 0.6rem;
+  border-radius: 5px;
+}
+
+.select{
+  width: 45%;
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: #D93F3F;
+}
+
+.select:hover{
+  background-color: #D93F3F;
+  color: white;
+}
+
 .conteinerCharacter--Card{
-  width: 100%;
-  gap: 1rem;
+  width: 99%;
+  gap: 0.8rem;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -160,17 +216,22 @@ text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   padding-bottom: 0.8rem;
-  width: 100%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   border-radius: 5%;
-  border: 4px black solid;
-  margin-bottom: 1rem;
+}
+
+.characterCard:hover{
+    width: 100%;
+    cursor: pointer;
 }
 
 .characterCard--header{
   width: 100%;
-  height: 35%;
+  height: 30%;
+  border-radius: 6px 6px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,13 +241,13 @@ text-align: center;
 }
 
 .characterCard--img{
-  width: 80%;
+  width: 60%;
 }
 
 .characterCard--info{
   display: grid;
   row-gap: 0.4rem;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -209,4 +270,171 @@ text-align: center;
   display: block;
 }
 
+/* style characterDetail */
 
+.characterDetail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.characterDetail--info{
+  margin-top: 4rem;
+  width: 80%;
+  height: 80%;
+  padding-bottom: 1rem;
+  box-shadow: 1px 10px 10px 6px #d1cdcd;
+}
+
+.info--header{
+  display: flex;
+  max-height: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.header--img{
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.info--sectionDiv{
+  padding: 0rem 2rem;
+}
+
+.info--id{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  box-shadow: 1px 1px 1px 1px #d1cdcd;
+}
+
+.info--name{
+  height: 1rem;
+}
+
+.info--name>h2{
+    display:inline-block;
+    background-color: white;
+    position: relative;
+    bottom: 1rem;
+}
+
+.info--weight, .info--height{
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.weight--info, .height--info{
+  display: block;
+}
+
+.info--typeAbilities{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 0.4rem;
+}
+
+.typeAbilities--info{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.stats--tittle{
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  bottom: 0.9rem;
+}
+
+.stats--stat{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats--bar{
+  width: 100%;
+  height: 1rem;
+  border-radius: 5px;
+  background-color: lightslategray;
+}
+
+.bar--porc{
+  height: 0.9rem;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+@media screen and (min-width: 500px){
+    
+  .conteinerUserInput--imgHeader{
+    width: 50%;
+  }
+  
+  .conteinerUserInput--form{
+    margin-bottom: 7.5rem;
+    gap: 2rem;
+  }
+  
+  .footer--Img{
+    width: 100%;
+    height: 25%;
+  }
+
+  /* styles header */
+
+.header{
+  height: 25vh;
+}
+
+  /* styles Character */
+
+.conteinerCharacter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.conteinerCharacter--tittle{
+  margin-left: 6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 0.8rem;
+  font-size: 1.5rem;
+}
+
+/* inputs */
+
+.conteinerCharacter--inputs{
+  margin-bottom: 1rem;
+  gap: 0.8rem;
+}
+
+.searchPokemon{
+  width: 25%;
+  padding: 0.2rem;
+}
+
+.searchPokemon::placeholder{
+   color: #D93F3F;
+   font-weight: bold;
+  }
+
+.select{
+  width: 30%;
+  padding: 0.3rem;
+}
+
+.conteinerCharacter--Card{
+  width: 90%;
+  margin: 0rem 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+}

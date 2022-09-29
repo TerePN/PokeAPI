@@ -26,6 +26,7 @@ const CharacterCard = ({ url }) => {
           setPokemonBackground("radial-gradient(circle at 23.41% 76.59%, #baced3 0, #b3c2c5 16.67%, #a9b0b0 33.33%, #9c9898 50%, #8e8182 66.67%, #846f73 83.33%, #7c646b 100%")
           break;
         case "fighting":
+          setPokemonColor("radial-gradient(circle at 54.06% 96.45%, #cc9400 0, #ce8500 10%, #cc7500 20%, #c66400 30%, #bb5100 40%, #ad3d00 50%, #9d2909 60%, #8e140f 70%, #810013 80%, #750016 90%, #6b0018 100%)")
           setPokemonBackground("radial-gradient(circle at 54.06% 96.45%, #cc9400 0, #ce8500 10%, #cc7500 20%, #c66400 30%, #bb5100 40%, #ad3d00 50%, #9d2909 60%, #8e140f 70%, #810013 80%, #750016 90%, #6b0018 100%)")
           break;
         case "flying":
