@@ -35,6 +35,7 @@ const CharacterDetail = () => {
           setPokemonBackground("radial-gradient(circle at 0% 0%, #fffffe 0, #fffff3 16.67%, #fbf9e6 33.33%, #deded8 50%, #c4c3c9 66.67%, #b0abba 83.33%, #a196ad 100%")
           break;
         case "poison":
+          setPokemonColor("#5B3184")
           setPokemonBackground("radial-gradient(circle at 50% -20.71%, #ff14a7 0, #ff00af 12.5%, #ff00b4 25%, #f900b4 37.5%, #d402af 50%, #af0ca8 62.5%, #8d15a0 75%, #6c1b9a 87.5%, #4c1f94 100%)")
           break;
         case "ground":
@@ -107,7 +108,7 @@ const CharacterDetail = () => {
           </div>
 
           <div className="info--name">
-            <hr />
+            <hr/>
             <h2 style={{ color: `${pokemonColor}` }} > {pokemon.name} </h2>
           </div>
 
@@ -121,8 +122,8 @@ const CharacterDetail = () => {
           </div>
 
           <div className="info--typeAbilities">
-            <h3>type</h3>
-            <h3>abilities</h3>
+            <h3 style={{ color: `${pokemonColor}` }} >type</h3>
+            <h3 style={{ color: `${pokemonColor}` }} >abilities</h3>
           </div>
 
           <div className="typeAbilities--info">

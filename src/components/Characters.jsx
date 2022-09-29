@@ -16,11 +16,12 @@ const Characters = () => {
   const [typesPokemon, setTypesPokemon] = useState([]);
 
   // paginated
-  const page = 50
+  const [page, setPage] = useState(1);
   const pokemonsPerPage = 8;
   const lastIndex = page * pokemonsPerPage
   const firstIndex = lastIndex - pokemonsPerPage
-  const pokemonsPaginated = pokemonList.slice( firstIndex, lastIndex ) 
+  const pokemonsPaginated = pokemonList.slice(firstIndex, lastIndex)
+  const lastPage = Math.ceil(pokemonList.length / pokemonsPerPage)
 
   useEffect(() => {
     axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1155")
@@ -40,15 +41,25 @@ const Characters = () => {
       .then(res => setPokemonList(res.data.pokemon.map(pokemon => pokemon.pokemon)))
   }
 
+  const changePageInput = e => {
+    if(e.keyCode == 13){
+      if(parseInt(e.target.value) <= lastPage ){
+      setPage(parseInt(e.target.value))
+      } else {
+        alert("page wrong")
+      } 
+    }
+  } 
+
   return (
     <div className="conteinerCharacter">
 
       <Header />
 
       <div className="conteinerCharacter--tittle">
-        <h2> welcome </h2> 
+        <h2> welcome </h2>
         <b> {name} </b>
-       </div>
+      </div>
 
 
       <div className="conteinerCharacter--inputs">
@@ -88,10 +99,25 @@ const Characters = () => {
         }
       </ul>
 
-        <div className="buttons">
-          <button>next</button>
-          <button>previous</button>
-        </div>
+      <div className="buttons">
+        <button
+          onClick={() => setPage(page - 1)}
+          disabled={page === 1}>
+          <i className="fa-solid fa-backward"></i>
+        </button>
+        <input 
+        type="text"
+        placeholder="N°"
+        className="buttons--input"
+        value={page}
+        onKeyDown={e => changePageInput(e)} />
+        <p> of {lastPage} pages </p>
+        <button
+          onClick={() => setPage(page + 1)}
+          disabled={page === lastPage}>
+          <i className="fa-solid fa-forward"></i>
+        </button>
+      </div>
 
     </div>
   );

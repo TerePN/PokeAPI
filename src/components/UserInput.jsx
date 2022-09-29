@@ -38,7 +38,7 @@ const UserInput = () => {
         </button>
       </form>
       </div>
-        <img className="footer--Img" src="..\assets\images\pokemonFooter.png" alt="imagen" />
+        <img className="footer--Img" src="../src/assets/images/pokemonFooter.png" alt="imagen" />
     </div>
 
   );
