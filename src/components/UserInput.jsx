@@ -34,11 +34,12 @@ const UserInput = () => {
           value={userName}
           placeholder="Enter your name..."
           onChange={e => setUserName(e.target.value)} />
-        <button className="button-input">Begin</button>
+        <button className="conteinerUserInput--button">
+          <i className="fa-sharp fa-solid fa-paper-plane"></i>
+        </button>
       </form>
       </div>
-        <img className="footer--Img" src="https://c.wallhere.com/photos/39/8b/Pok_mon_Pok_Balls_artwork-1368481.jpg!d" alt="" />
-
+        <img className="footer--Img" src="..\assets\images\pokemonFooter.png" alt="imagen" />
     </div>
 
   );
