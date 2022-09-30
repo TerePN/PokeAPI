@@ -87,7 +87,7 @@ const Characters = () => {
           type="text"
           className="searchPokemon"
           value={nameInput}
-          onChange={e => setNameInput(e.target.value)}
+          onChange={e => setNameInput(e.target.value.toLowerCase())}
           placeholder="Search pokemon" />
 
         <button

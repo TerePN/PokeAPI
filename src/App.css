@@ -204,6 +204,8 @@ span{
 }
 
 .searchPokemon {
+  color: #D93F3F;
+  font-weight: bold;
   width: 35%;
   border-radius: 5px;
   padding: 0.3rem;
@@ -212,6 +214,7 @@ span{
 }
 
 .searchPokemon:hover {
+  color: white;
   background-color:#D93F3F;
 }
 
@@ -232,7 +235,7 @@ span{
 .buttonSearchPokemon {
   background-color: #D93F3F;
   color: white;
-  padding: 0.2rem;
+  padding: 0.3rem;
   margin-left: 0.1rem;
   margin-right: 0.6rem;
   border-radius: 5px;
