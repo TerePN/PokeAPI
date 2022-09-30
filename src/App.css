@@ -25,6 +25,7 @@ body {
 
 .app {
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -91,7 +92,33 @@ body {
 
 .hello{
   color: #FE1936;
-  
+}
+
+/************** inputUseR footer******************* */
+
+.footer{
+  height: 15vh;
+}
+
+.footer--Img1{
+  width: 100%;
+  height: 60%;
+  background-color: #DD1A1A;
+}
+
+.footer--Img2{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  background-color: black;
+}
+
+.footer--Img {
+  width: 12%;
+  margin-bottom: 0.6rem;
 }
 
 /************************* styles header **************************/
@@ -145,32 +172,6 @@ body {
   border-radius: 50%;
 }
 
-/************** inputUseR footer******************* */
-
-.footer{
-  height: 15vh;
-}
-
-.footer--Img1{
-  width: 100%;
-  height: 60%;
-  background-color: #DD1A1A;
-}
-
-.footer--Img2{
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  width: 100%;
-  height: 40%;
-  background-color: black;
-}
-
-.footer--Img {
-  width: 12%;
-  margin-bottom: 0.6rem;
-}
 
 /*************** styles Character *****************************/
 
