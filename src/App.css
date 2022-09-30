@@ -112,8 +112,8 @@ body {
 }
 
 .footer--Img {
-  width: 12%;
-  margin-bottom: 0.6rem;
+  width: 14%;
+  margin-bottom: 0.7rem;
 }
 
 /************************* styles header **************************/
@@ -474,6 +474,11 @@ button:hover {
 @media screen and (min-width: 400px) {
 
 /* *********userinput ***************/
+
+.conteinerUserInput{
+  padding-top: 5rem;
+}
+
   .conteinerUserInput--imgHeader {
     width: 50%;
   }
@@ -562,6 +567,10 @@ button:hover {
 @media screen and (min-width: 800px) {
 
 /******** userInput **********************/
+
+.conteinerUserInput{
+  padding-top: 3rem;
+}
 
 .footer{
   width: 100vw;
