@@ -112,8 +112,8 @@ body {
 }
 
 .footer--Img {
-  width: 16%;
-  margin-bottom: 0.8rem;
+  width: 15%;
+  margin-bottom: 0.75rem;
 }
 
 /************************* styles header **************************/
@@ -177,15 +177,8 @@ body {
 }
 
 .conteinerCharacter--tittle {
-  /* width: 99%; */
-  /* overflow-x: hidden; */
-  /* margin-left: 4rem; */
-  /* margin-bottom: 0.4rem; */
-  /* gap: 0.5rem; */
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* align-items: baseline; */
-  /* justify-content: center; */
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
   color: #D93F3F;
   font-size: 9px;
 }
@@ -521,7 +514,6 @@ button:hover {
   }
 
   .conteinerCharacter--tittle {
-    margin-left: 3rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     gap: 0.8rem;
