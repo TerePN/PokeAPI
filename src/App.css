@@ -23,16 +23,11 @@ body {
   text-align: center;
 }
 
-.App {
-  width: 100vw;
-  height: 100vh;
-}
-
 /* styles UserInput */
 
 .conteinerUserInput {
   width: 100vw;
-  height: 98%;
+  height: 100vh;
   padding-top: 2rem;
   overflow: hidden;
   box-sizing: border-box;
@@ -484,6 +479,7 @@ button:hover {
   }
 
   .conteinerUserInput--form {
+
     gap: 2rem;
   }
   
