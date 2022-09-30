@@ -146,6 +146,28 @@ body {
   border-radius: 50%;
 }
 
+/************** inputUseR footer******************* */
+.footer--Img1{
+  width: 100%;
+  height: 8%;
+  background-color: #DD1A1A;
+}
+
+.footer--Img2{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 6%;
+  background-color: black;
+}
+
+.footer--Img {
+  width: 12%;
+  margin-bottom: 0.6rem;
+}
+
 /*************** styles Character *****************************/
 
 .conteinerCharacter {
@@ -340,6 +362,7 @@ button:hover {
   display: block;
 }
 
+
 /* ******************** style characterDetail *******************/
 
 .characterDetail {
@@ -445,23 +468,7 @@ button:hover {
   border-radius: 5px;
   background-color: orange;
 }
-.footer--Img1{
-  width: 100%;
-  height: 10%;
-  background-color: #DD1A1A;
 
-}
-.footer--Img2{
-  width: 100%;
-  height: 8%;
-  background-color: black;
-
-}
-.footer--Img {
-  
-  position: absolute;
-  /* padding-bottom: 18px; */
-}
 /* ******************* media query 400px *********************/
 
 @media screen and (min-width: 400px) {
@@ -475,17 +482,28 @@ button:hover {
     margin-bottom: 7.5rem;
     gap: 2rem;
   }
-  .footer--Img {
-    height: 13%;
-    width: 15%;
-    position: absolute;
-    padding-bottom: 18px;
-  }
+  
   
   /************ styles header *************/
 
   .header {
     height: 25vh;
+  }
+
+  /* footer******************************* */
+
+.footer--Img1{
+  height: 10%;
+}
+
+.footer--Img2{
+  height: 7%;
+}
+
+  .footer--Img {
+    width: 12%;
+    max-width: 50px;
+    margin-bottom: 0.6rem;
   }
 
   /*************** styles Character ******************/
@@ -548,10 +566,8 @@ button:hover {
 
 /******** userInput **********************/
   .footer--Img {
-    height: 15%;
-    width: 7%;
-    position: absolute;
-    padding-bottom: 13px;
+    margin-bottom: 0.65rem;
+    max-width: 65px;
   }
 
   /* *************** inputs search **************/

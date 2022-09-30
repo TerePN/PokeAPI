@@ -16,6 +16,7 @@ const Characters = () => {
   const [typesPokemon, setTypesPokemon] = useState([]);
 
   // paginated
+  const [inputPage, setInputPage] = useState(1)
   const [page, setPage] = useState(1);
   const pokemonsPerPage = 8;
   const lastIndex = page * pokemonsPerPage
@@ -41,15 +42,35 @@ const Characters = () => {
       .then(res => setPokemonList(res.data.pokemon.map(pokemon => pokemon.pokemon)))
   }
 
-  const changePageInput = e => {
+///////////////////// paginated /////////////////////
+  const onKeyInput = e => {
     if(e.keyCode == 13){
-      if(parseInt(e.target.value) <= lastPage ){
       setPage(parseInt(e.target.value))
-      } else {
+
+      if(e.target.value < 1 || e.target.value > lastPage  || isNaN(e.target.value) ){
+        setPage(1)
+        setInputPage(1)
         alert("page wrong")
+      } else {
+        setPage(parseInt(e.target.value))
       } 
     }
-  } 
+  }
+  
+  const onChangeInput = (e) =>{
+    setInputPage(e.target.value)
+  }
+
+  const nextPage = () => {
+    setInputPage( parseInt(inputPage) + 1);
+    setPage(page+1);
+  }
+
+
+  const previousPage = () => {
+    setInputPage( parseInt(inputPage-1));
+    setPage(page-1);
+  }
 
   return (
     <div className="conteinerCharacter">
@@ -100,7 +121,7 @@ const Characters = () => {
 
       <div className="buttons">
         <button
-          onClick={() => setPage(page - 1)}
+          onClick={previousPage}
           disabled={page === 1}>
           <i className="fa-solid fa-backward"></i>
         </button>
@@ -108,11 +129,12 @@ const Characters = () => {
         type="text"
         placeholder="N°"
         className="buttons--input"
-        value={page}
-        onKeyDown={e => changePageInput(e)} />
+        value={ inputPage }
+        onChange={e => onChangeInput(e)}
+        onKeyDown={e => onKeyInput(e)} />
         <p> of {lastPage} pages </p>
         <button
-          onClick={() => setPage(page + 1)}
+          onClick={nextPage}
           disabled={page === lastPage}>
           <i className="fa-solid fa-forward"></i>
         </button>
