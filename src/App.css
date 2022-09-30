@@ -28,7 +28,7 @@ body {
 .conteinerUserInput {
   width: 100vw;
   height: 100vh;
-  padding-top: 8rem;
+  padding-top: 5rem;
   overflow: hidden;
   box-sizing: border-box;
   display: flex;
@@ -46,7 +46,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  
+  margin-bottom: 1.5rem;
 }
 
 .conteinerUserInput--input{
@@ -112,8 +112,8 @@ body {
 }
 
 .footer--Img {
-  width: 14%;
-  margin-bottom: 0.7rem;
+  width: 16%;
+  margin-bottom: 0.8rem;
 }
 
 /************************* styles header **************************/
