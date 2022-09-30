@@ -37,8 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
-  /* background-color: lightslategray; */
+  justify-content: space-between;
 }
 
 .conteinerUserInput--imgHeader {
@@ -46,7 +45,7 @@ body {
 }
 
 .conteinerUserInput--form {
-  margin-bottom: 9rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,9 +146,14 @@ body {
 }
 
 /************** inputUseR footer******************* */
+
+.footer{
+  height: 15vh;
+}
+
 .footer--Img1{
   width: 100%;
-  height: 8%;
+  height: 60%;
   background-color: #DD1A1A;
 }
 
@@ -159,7 +163,7 @@ body {
   justify-content: end;
   align-items: center;
   width: 100%;
-  height: 6%;
+  height: 40%;
   background-color: black;
 }
 
@@ -492,13 +496,10 @@ button:hover {
 
   /* footer******************************* */
 
-.footer--Img1{
-  height: 10%;
-}
-
-.footer--Img2{
-  height: 7%;
-}
+  .footer{
+    width: 100vw;
+    height: 18vh;
+  }
 
   .footer--Img {
     width: 12%;
@@ -565,9 +566,15 @@ button:hover {
 @media screen and (min-width: 800px) {
 
 /******** userInput **********************/
+
+.footer{
+  width: 100vw;
+  height: 20vh;
+}
+
   .footer--Img {
     margin-bottom: 0.65rem;
-    max-width: 65px;
+    max-width: 60px;
   }
 
   /* *************** inputs search **************/

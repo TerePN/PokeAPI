@@ -40,11 +40,12 @@ const UserInput = () => {
         </form>
       </div>
 
-
+      <footer className="footer">
       <div className="footer--Img1"></div>
       <div className="footer--Img2">
         <img className="footer--Img" src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c329.png" alt="imagen" />
       </div>
+      </footer>
     </div>
 
   );
